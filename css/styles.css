@@ -1,0 +1,326 @@
+/* Reset de estilos para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el body */
+body {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(../img/wallpaper.jpg); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajustar la imagen al tamaño del fondo */
+    background-position: center; /* Centrar la imagen */
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #ffffff;
+}
+
+/* Estilos para el header y la navegación */
+
+nav {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    font-family: 'Bungee Inline', cursive;
+    
+}
+
+nav ul {
+    border-radius: 15%;
+    background-color: #006dc7;
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav li {
+    margin-right: 10px;
+}
+
+nav li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+ 
+    color: #9dff00;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+nav a:hover{
+    color: #6cad03;
+
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* estilos del main */
+main{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 1em;
+   
+}
+/* Estilos para el pop-up */
+button {
+    background: linear-gradient(45deg, orange, red);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 25px;
+    height: 50px;
+    width: 200px;
+    margin-left: 10px;
+  } 
+
+  button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    transition: left 0.3s;
+}
+
+button:hover::before {
+    left: 100%;
+}
+  
+  .modal-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;  
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw; 
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+  }
+  
+  .show {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .modal {
+    background-color: #fff;
+    color: #006dc7;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    
+  }
+  
+  .modal h1 {
+    margin: 0;
+  }
+  
+  .modal p {
+    opacity: 0.7;
+    font-size: 14px;
+  }
+  #close{
+    justify-content: centers;
+  }
+/* Estilos para el logo */
+#logo-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    /* margin-left: 37vh; */
+    margin-bottom: 20px;
+
+}
+
+.letter {
+    
+    font-size: 10rem;
+    font-family: 'Bangers', cursive;
+    /* font-family: 'Finger Paint', cursive; */ 
+    padding-top: 1em; 
+    color:  #9dff00 ; /* #007bff;  Puedes ajustar el color de la letra */
+    opacity: 0;
+    animation: revealLetter 5s forwards; /* 5 segundos de duración de la animación */
+    
+}
+
+.additional-text {
+
+    font-size: 3.5rem;
+    font-family: 'Finger Paint', cursive;
+    color: #298efa;
+    text-shadow: 2px 2px 4px rgba(6, 255, 234, 0.5), -2px -2px 4px rgba(90, 226, 0, 0.5);
+    /* color: #006dc7; */
+    opacity: 0;
+    line-height: 1.5;
+    animation: revealLetter 5s forwards; /* 5 segundos de duración de la animación */
+    margin-top: 10px;
+}
+
+@keyframes revealLetter {
+    to {
+        opacity: 1;
+    } 
+}
+
+/* Estilos para los iconos en el margen derecho */
+.icons-container {
+    display: flex;
+    flex-direction: column;    
+    align-items: flex-end;
+    margin-right:8em;
+    margin-top: 10em; 
+    
+ 
+}
+
+.icon {
+    width: 8px;
+    height: 80px;
+    font-size: 2em;
+    color: #298efa;
+    margin-bottom: 10px;
+    /* Estilos adicionales para los iconos, como fondo, color, bordes, etc. */
+}
+
+.fonts{
+    font-family: 'Bungee Inline', cursive;
+    color: #9dff00;
+    font-size: 3em;
+}
+
+.fonts:hover{
+    color: rgba(252, 105, 19, 0.815);
+}
+.icon:hover{
+    color: aquamarine;
+}
+
+/* Estilos para la sección de proyectos */
+.proyects {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.p_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.p_container div {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* TUKI */
+.skills {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.s_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.s_container div {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer{
+    background-color: #006dc7;
+    text-align: center;
+    padding: 8% 0;
+    width: 100%;
+
+}
+/* Media query para pantallas de tamaño máximo de 768px (tablets y dispositivos móviles) */
+@media screen and (max-width: 768px) {
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        display: none;
+    }
+    .letter{
+        font-size: 5em;
+    }
+
+    .additional-text{
+        font-size: 2rem;
+        text-shadow: 2px 2px 4px rgba(6, 255, 234, 0.5), -2px -2px 4px rgba(90, 226, 0, 0.5);
+    }
+    .logo-container{
+        margin-bottom: 20px;
+        margin-left: 5px;
+        
+    }
+
+
+    .icons-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-right: 5px;
+        margin-top: 20px;
+        gap: 2em;
+        background-color: #298efa54;
+        padding: 2em;
+        border-radius: 20px;
+    }
+
+    .icon {
+        width:1em; 
+        display: flex;
+        align-items: center;        
+        margin-left: 5px;
+        margin-bottom: 0;
+    
+    }
+}
