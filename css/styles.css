@@ -10,11 +10,13 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url(../img/wallpaper.jpg); /* Ruta de la imagen de fondo */
+    background-image: url(../img/6417740.jpg); /* Ruta de la imagen de fondo */
     background-size: cover; /* Ajustar la imagen al tamaño del fondo */
     background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat;
     font-family: 'Merriweather Sans', sans-serif;
     color: #ffffff;
+    z-index: 1;
 }
 
 /* Estilos para el header y la navegación */
@@ -69,10 +71,10 @@ nav a:hover{
 main{
     display: grid;
     grid-template-columns:  1fr 1fr 1fr;
+    grid-gap: 1em;
     align-items: center;
     margin-bottom: 20px;
-    gap: 1em;
-   
+    width: 100%;   
 }
 /* Estilos para el pop-up */
 button {
@@ -86,56 +88,46 @@ button {
     height: 50px;
     width: 200px;
     margin-left: 10px;
+ 
   } 
 
-  button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: blue;
-    transition: left 0.3s;
-}
-
-button:hover::before {
-    left: 100%;
-}
+  
   
   .modal-container {
     display: flex;
     background-color: rgba(0, 0, 0, 0.3);
     align-items: center;
-    justify-content: center;
-    position: fixed;
+    justify-content: flex-start;
+    position: absolute;
     pointer-events: none;
-    opacity: 0;  
+    opacity: 0;
     top: 0;
-    left: 0;
+    left: -100%; /* Inicialmente fuera de la pantalla */
     height: 100vh;
-    width: 100vw; 
-    transition: opacity 0.3s ease;
+    width: 100vw;
+    transition: opacity 0.5s ease, left 0.5s ease; /* Ajusta la velocidad de deslizamiento */
     z-index: 9999;
-  }
+}
   
-  .show {
+.show {
     pointer-events: auto;
     opacity: 1;
-  }
-  
-  .modal {
-    background-color: #fff;
-    color: #006dc7;
-    width: 600px;
+    left: 0; /* Muestra el pop-up moviéndolo a la posición izquierda */
+}
+
+.modal {
+    background-color: #00008B; /* Cambia el color de fondo a azul marino (#00008B) */
+    color: #fff; /* Cambia el color del texto a blanco (#fff) */
+    width: 800px;
+    height: 600px;
     max-width: 100%;
     padding: 30px 50px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
+}
 
-    
-  }
+  
   
   .modal h1 {
     margin: 0;
@@ -145,17 +137,33 @@ button:hover::before {
     opacity: 0.7;
     font-size: 14px;
   }
-  #close{
-    justify-content: centers;
+/*  Estilos Formulario  */
+
+.contact-form {
+    background-color: #29465B;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+    margin: 1em auto;
   }
+  
+  .contact-form h2 {
+    
+    margin-top: 0;
+  }
+  
+  
 /* Estilos para el logo */
 #logo-container {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    /* margin-left: 37vh; */
     margin-bottom: 20px;
+
 
 }
 
@@ -163,9 +171,9 @@ button:hover::before {
     
     font-size: 10rem;
     font-family: 'Bangers', cursive;
-    /* font-family: 'Finger Paint', cursive; */ 
+
     padding-top: 1em; 
-    color:  #9dff00 ; /* #007bff;  Puedes ajustar el color de la letra */
+    color:  #9dff00 ; 
     opacity: 0;
     animation: revealLetter 5s forwards; /* 5 segundos de duración de la animación */
     
@@ -177,7 +185,6 @@ button:hover::before {
     font-family: 'Finger Paint', cursive;
     color: #298efa;
     text-shadow: 2px 2px 4px rgba(6, 255, 234, 0.5), -2px -2px 4px rgba(90, 226, 0, 0.5);
-    /* color: #006dc7; */
     opacity: 0;
     line-height: 1.5;
     animation: revealLetter 5s forwards; /* 5 segundos de duración de la animación */
@@ -210,15 +217,12 @@ button:hover::before {
     /* Estilos adicionales para los iconos, como fondo, color, bordes, etc. */
 }
 
-.fonts{
+.title{
     font-family: 'Bungee Inline', cursive;
     color: #9dff00;
     font-size: 3em;
 }
 
-.fonts:hover{
-    color: rgba(252, 105, 19, 0.815);
-}
 .icon:hover{
     color: aquamarine;
 }
@@ -246,6 +250,67 @@ button:hover::before {
     align-items: center;
     justify-content: center;
 }
+/* SECCION PORTFOLIO */
+.portfolio {
+    background: radial-gradient(circle, #174b1b, #071d09);
+    color: #fff;
+    padding: 50px 20px;
+    z-index: 40;
+}
+
+.portfolio .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.portfolio h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.portfolio .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.portfolio .galeria .proyecto{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.portfolio .galeria .proyecto img{
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+.portfolio .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(#152ebe81, #162fbe7c);
+    /* background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8)); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.portfolio .galeria .proyecto .overlay h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.portfolio .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
+.portfolio .galeria .proyecto .overlay:hover h3{
+    margin-bottom: 0px;
+}
 /* TUKI */
 .skills {
     text-align: center;
@@ -271,7 +336,7 @@ button:hover::before {
 }
 
 .footer{
-    background-color: #006dc7;
+    background-color:#006dc7;
     text-align: center;
     padding: 8% 0;
     width: 100%;
@@ -279,6 +344,30 @@ button:hover::before {
 }
 /* Media query para pantallas de tamaño máximo de 768px (tablets y dispositivos móviles) */
 @media screen and (max-width: 768px) {
+    body {
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-size: auto; /* Cambiar el tamaño de la imagen de fondo */
+        background-position: top; /* Cambiar la posición de la imagen de fondo */
+    }
+
+    nav ul {
+        justify-content: flex-start; /* Centrar los elementos en pantallas pequeñas */
+        background-color: transparent; /* Quitar el fondo del menú en pantallas pequeñas */
+        padding: 0; /* Quitar el relleno en pantallas pequeñas */
+        flex-direction: column; /* Apilar los elementos en pantallas pequeñas */
+        align-items: center; /* Centrar horizontalmente los elementos en pantallas pequeñas */
+    }
+
+    nav li {
+        margin: 5px 0; /* Espaciado entre elementos en pantallas pequeñas */
+    }
+
+    nav {
+        position: static; /* Cambiar la posición de navegación en pantallas pequeñas */
+        text-align: center; /* Centrar el texto en pantallas pequeñas */
+    }
+    
 
     main{
         display: flex;
@@ -288,7 +377,9 @@ button:hover::before {
         display: none;
     }
     .letter{
+        margin-top: -50px;
         font-size: 5em;
+        max-width: 100%;
     }
 
     .additional-text{

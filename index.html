@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
 <!--Ecléctico, creativo, audaz, weirdo, vitalidad, versátil-->
 
@@ -22,105 +24,203 @@
         rel="stylesheet">
     <!-- LINK ICONS-->
     <script src="https://kit.fontawesome.com/a4eea87710.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="img/favicon-32x32.png">
+
 
     <title>My portfolio 2.0</title>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <button>About me
-        </button>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#nosotros">About me</a></li>
+            <li><a href="#servicios">My proyects</a></li>
+            <li><a href="#contacto">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <div id="modal_container" class="modal-container">
-            <div class="modal">
-                <h1>Ventana Modal</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque assumenda dignissimos illo
-                    explicabo
-                    natus quia repellat, praesentium voluptatibus harum ipsam dolorem cumque labore sunt dicta
-                    consectetur,
-                    nesciunt maiores delectus maxime?
-                </p>
-                <button id="close">Cerrar</button>
+<main>
+    <button id="open">About me</button>
+    <div id="modal_container" class="modal-container">
+        <div class="modal">
+            <button id="translateButton">Translate to Spanish</button>
+
+            <h1>About Me.</h1>
+            <p>
+                Greetings! I'm Walter, a passionate Web Developer from Argentina. I invite you to explore my eclectic and versatile approach in the exciting world of web development. From innovative projects to corporate solutions, I blend innovation with tradition, always with boldness and authenticity.
+
+My portfolio is a testament to how I combine creativity with versatility to craft unique and functional web experiences. If you're seeking a balanced perspective that captures both the cutting-edge and the conventional, I'm here to collaborate.
+
+Thank you for joining me on this journey of exploration and creativity in web development.
+            </p>
+           <!-- ... FORMULARIO ... -->
+
+<form id="contactForm" class="contact-form">
+    <h2>For new projects, inquiries, or even a coffe</h2>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+    </div>
+
+    <button type="submit">Send</button>
+</form>
+
+<!-- ... FORMULARIO ... -->
+
+            <button id="close">Close</button>
+        </div>
+    </div>
+          
+
+
+
+
+<!-- LOGO -->
+
+
+    <div id="logo-container">
+        <h2 class="letter">Walter_vZ</h2>
+        <span class="additional-text">
+            WEB DESIGNER<br>
+            Fr0nT EnD
+            dEvElOpEr
+        </span>
+    </div>
+<!--COLUMNA DE ICONOS-->
+    <!-- https://www.youtube.com/watch?v=AROjw9qLL6k -->
+    <div class="icons-container">
+        <div class="icon">
+
+            <i
+                class="fa-brands fa-square-instagram"></i><!-- Aquí puedes agregar el código o la imagen del primer icono -->
+        </div>
+        <div class="icon">
+            <i class="fa-brands fa-linkedin"></i><!-- Aquí puedes agregar el código o la imagen del segundo icono -->
+        </div>
+        <div class="icon">
+            <i
+                class="fa-brands fa-square-whatsapp"></i><!-- Aquí puedes agregar el código o la imagen del tercer icono -->
+        </div>
+        <div class="icon">
+            <i class="fa-solid fa-envelope"></i><!-- Aquí puedes agregar el código o la imagen del cuarto icono -->
+        </div>
+    </div>
+    </div>
+    </div>
+</main>
+
+<!-- SECCION PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+    <div class="contenido-seccion">
+        <h2 class="title">Lastests works & Proyects</h2>
+        <div class="galeria">
+            <div class="proyecto">
+                <img src="img/p1.jpg" alt="">
+                <div class="overlay">
+                    <h3>Landing page</h3>
+                    <p>Estudio jurídico</p>
+                </div>
+            </div>
+            <div class="proyecto">
+                <img src="img/p2.jpg" alt="">
+                <div class="overlay">
+                    <h3>Diseño Corporativo</h3>
+                    <p>Estudio Jurídico</p>
+                </div>
+            </div>
+            <div class="proyecto">
+                <img src="img/p3.jpg" alt="">
+                <div class="overlay">
+                    <h3>Variación diseño corporativo</h3>
+                    <p>Pagina marketing digital</p>
+                </div>
+            </div>
+            <div class="proyecto">
+                <img src="img/p4.jpg" alt="">
+                <div class="overlay">
+                    <h3>Landing page</h3>
+                    <p>ONG Rescate animal</p>
+                </div>
+            </div>
+            <div class="proyecto">
+                <img src="img/p5.jpg" alt="">
+                <div class="overlay">
+                    <h3>Carrito de compras</h3>
+                    <p>Casa de comida rapida</p>
+                </div>
             </div>
         </div>
-
-
-        <div id="logo-container">
-            <h2 class="letter">Walter_vZ</h2>
-            <span class="additional-text">
-                WEB DESIGNER<br>
-                Fr0nT EnD
-                dEvElOpEr
-            </span>
-        </div>
-
-        <!-- https://www.youtube.com/watch?v=AROjw9qLL6k -->
-        <div class="icons-container">
-            <div class="icon">
-
-                <i
-                    class="fa-brands fa-square-instagram"></i><!-- Aquí puedes agregar el código o la imagen del primer icono -->
+    </div>
+</section>
+<!-- SECCION SKILLS -->
+<section id="portfolio" class="portfolio">
+    <div class="contenido-seccion">
+        <h2 class="title">Skills</h2>
+        <div class="galeria">
+            <div class="proyecto">
+                <img src="img/Html5.png" alt="">
+                <div class="overlay">
+                    <h3>HTML</h3>
+                  
+                </div>
             </div>
-            <div class="icon">
-                <i
-                    class="fa-brands fa-linkedin"></i><!-- Aquí puedes agregar el código o la imagen del segundo icono -->
+            <div class="proyecto">
+                <img src="img/css.png" alt="">
+                <div class="overlay">
+                    <h3>CSS</h3>
+                   
+                </div>
             </div>
-            <div class="icon">
-                <i
-                    class="fa-brands fa-square-whatsapp"></i><!-- Aquí puedes agregar el código o la imagen del tercer icono -->
+            <div class="proyecto">
+                <img src="img/JavaScript-Logo.png" alt="">
+                <div class="overlay">
+                    <h3>JAVASCRIPT</h3>
+                </div>
             </div>
-            <div class="icon">
-                <i class="fa-solid fa-envelope"></i><!-- Aquí puedes agregar el código o la imagen del cuarto icono -->
+            <div class="proyecto">
+                <img src="img/Git&GitHub.png" alt="">
+                <div class="overlay">
+                    <h>GIT & GITHUB</h>
+                </div>
+            </div>
+            <div class="proyecto">
+                <img src="img/sass.png" alt="">
+                <div class="overlay">
+                    <h3>SASS</h3>
+                </div>
+            </div>
+            <div class="proyecto">
+                <img src="img/Bootstrap.png" alt="">
+                <div class="overlay">
+                    <h3>BOOTSTRAP</h3>
+                </div>
             </div>
         </div>
-        </div>
-        </div>
-    </main>
+    </div>
+</section>
 
-    <section class="proyects">
-        <h3 class="fonts">MY PROYECTS</h3>
-        <div class="p_container">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-        </div>
-    </section>
-    <section class="skills">
-        <h4 class="fonts">SKILLS</h4>
-        <div class="s_container">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-        </div>
-    </section>
-    <footer>
-        <h5 class="footer">Tuki</h5>
-    </footer>
+<footer>
+    <h5 class="footer">Tuki</h5>
+</footer>
 
-    <!--     el link para hacer el pop-up -about me- https://www.youtube.com/watch?v=5c8NLiKW5aI 
+<!--     el link para hacer el pop-up -about me- https://www.youtube.com/watch?v=5c8NLiKW5aI 
     header -->
 
 
 
-
-    <script src="js/script.js"></script>
+    Imagen de <a href="https://www.freepik.es/vector-gratis/fondo-tecnologia-verde-degradado_21534796.htm">Freepik</a>
+<script src="js/script.js"></script>
 </body>
 
 </html>
