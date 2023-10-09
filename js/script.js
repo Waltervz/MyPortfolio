@@ -1,14 +1,14 @@
-const open = document.getElementById('open');
+const openNavButton = document.getElementById('openNav');
+const openMainButton = document.getElementById('openMain');
 const modal_container = document.getElementById('modal_container');
 const close = document.getElementById('close');
-const nameField = document.getElementById("name"); // Reemplaza "name" con el ID de tu campo de nombre
-const emailField = document.getElementById("email"); // Reemplaza "email" con el ID de tu campo de correo electrónico
-const messageField = document.getElementById("message"); // Reemplaza "message" con el ID de tu campo de mensaje
-const sendButton = document.querySelector("#contactForm button[type='submit']");
 
+openNavButton.addEventListener('click', () => {
+  modal_container.classList.add('show');
+});
 
-open.addEventListener('click', () => {
-  modal_container.classList.add('show');  
+openMainButton.addEventListener('click', () => {
+  modal_container.classList.add('show');
 });
 
 close.addEventListener('click', () => {
@@ -55,3 +55,4 @@ function toggleTranslation() {
   // Cambiar texto del botón "Send"
   sendButton.textContent = isTranslated ? "Enviar" : "Send";
 }
+

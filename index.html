@@ -24,6 +24,8 @@
         rel="stylesheet">
     <!-- LINK ICONS-->
     <script src="https://kit.fontawesome.com/a4eea87710.js" crossorigin="anonymous"></script>
+    <!--LINK JQUERY-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 
 
     <title>My portfolio 2.0</title>
@@ -33,60 +35,64 @@
 <header>
     <nav>
         <ul>
-            <li><a href="#nosotros">About me</a></li>
+            <li><a href="#nosotros" id="openNav">About me</a></li>
             <li><a href="#servicios">My proyects</a></li>
             <li><a href="#contacto">Contact</a></li>
         </ul>
     </nav>
 </header>
-
+<span class="ir-arriba icon-arrow-up2"></span>
 <main>
-    <button id="open">About me</button>
+    <button id="openMain">About me</button>
     <div id="modal_container" class="modal-container">
         <div class="modal">
             <button id="translateButton">Translate to Spanish</button>
 
             <h1>About Me.</h1>
             <p>
-                Greetings! I'm Walter, a passionate Web Developer from Argentina. I invite you to explore my eclectic and versatile approach in the exciting world of web development. From innovative projects to corporate solutions, I blend innovation with tradition, always with boldness and authenticity.
+                Greetings! I'm Walter, a passionate Web Developer from Argentina. I invite you to explore my eclectic
+                and versatile approach in the exciting world of web development. From innovative projects to corporate
+                solutions, I blend innovation with tradition, always with boldness and authenticity.
 
-My portfolio is a testament to how I combine creativity with versatility to craft unique and functional web experiences. If you're seeking a balanced perspective that captures both the cutting-edge and the conventional, I'm here to collaborate.
+                My portfolio is a testament to how I combine creativity with versatility to craft unique and functional
+                web experiences. If you're seeking a balanced perspective that captures both the cutting-edge and the
+                conventional, I'm here to collaborate.
 
-Thank you for joining me on this journey of exploration and creativity in web development.
+                Thank you for joining me on this journey of exploration and creativity in web development.
             </p>
-           <!-- ... FORMULARIO ... -->
+            <!-- ... FORMULARIO ... -->
+            <div class="form-container">
+            <form id="contactForm" class="contact-form">
+                <h2>For new projects, inquiries, or even a coffe</h2>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-<form id="contactForm" class="contact-form">
-    <h2>For new projects, inquiries, or even a coffe</h2>
-    <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-    </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-    <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
 
-    <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-    </div>
-
-    <button type="submit">Send</button>
-</form>
-
-<!-- ... FORMULARIO ... -->
+                <button type="submit">Send</button>
+            </form>
+            </div>
+            <!-- ... FORMULARIO ... -->
 
             <button id="close">Close</button>
         </div>
     </div>
-          
 
 
 
 
-<!-- LOGO -->
+
+    <!-- LOGO -->
 
 
     <div id="logo-container">
@@ -97,7 +103,7 @@ Thank you for joining me on this journey of exploration and creativity in web de
             dEvElOpEr
         </span>
     </div>
-<!--COLUMNA DE ICONOS-->
+    <!--COLUMNA DE ICONOS-->
     <!-- https://www.youtube.com/watch?v=AROjw9qLL6k -->
     <div class="icons-container">
         <div class="icon">
@@ -109,8 +115,7 @@ Thank you for joining me on this journey of exploration and creativity in web de
             <i class="fa-brands fa-linkedin"></i><!-- Aquí puedes agregar el código o la imagen del segundo icono -->
         </div>
         <div class="icon">
-            <i
-                class="fa-brands fa-square-whatsapp"></i><!-- Aquí puedes agregar el código o la imagen del tercer icono -->
+            <i class="fa-brands fa-github"></i><!-- Aquí puedes agregar el código o la imagen del tercer icono -->
         </div>
         <div class="icon">
             <i class="fa-solid fa-envelope"></i><!-- Aquí puedes agregar el código o la imagen del cuarto icono -->
@@ -129,35 +134,35 @@ Thank you for joining me on this journey of exploration and creativity in web de
                 <img src="img/p1.jpg" alt="">
                 <div class="overlay">
                     <h3>Landing page</h3>
-                    <p>Estudio jurídico</p>
+                    <p>Legal Study</p>
                 </div>
             </div>
             <div class="proyecto">
                 <img src="img/p2.jpg" alt="">
                 <div class="overlay">
-                    <h3>Diseño Corporativo</h3>
-                    <p>Estudio Jurídico</p>
+                    <h3>Corporative Design</h3>
+                    <p>Legal Study</p>
                 </div>
             </div>
             <div class="proyecto">
                 <img src="img/p3.jpg" alt="">
                 <div class="overlay">
-                    <h3>Variación diseño corporativo</h3>
-                    <p>Pagina marketing digital</p>
+                    <h3>Variation Corporative design</h3>
+                    <p>Digital Marketing Design</p>
                 </div>
             </div>
             <div class="proyecto">
                 <img src="img/p4.jpg" alt="">
                 <div class="overlay">
                     <h3>Landing page</h3>
-                    <p>ONG Rescate animal</p>
+                    <p>NGO Animal Rescue</p>
                 </div>
             </div>
             <div class="proyecto">
                 <img src="img/p5.jpg" alt="">
                 <div class="overlay">
-                    <h3>Carrito de compras</h3>
-                    <p>Casa de comida rapida</p>
+                    <h3>Shopping Cart</h3>
+                    <p>Restaurant</p>
                 </div>
             </div>
         </div>
@@ -170,56 +175,75 @@ Thank you for joining me on this journey of exploration and creativity in web de
         <div class="galeria">
             <div class="proyecto">
                 <img src="img/Html5.png" alt="">
-                <div class="overlay">
-                    <h3>HTML</h3>
-                  
+                <div>
+                    <h3></h3>
+
                 </div>
             </div>
             <div class="proyecto">
                 <img src="img/css.png" alt="">
-                <div class="overlay">
-                    <h3>CSS</h3>
-                   
+                <div>
+
+
                 </div>
             </div>
             <div class="proyecto">
                 <img src="img/JavaScript-Logo.png" alt="">
-                <div class="overlay">
-                    <h3>JAVASCRIPT</h3>
+                <div>
+
                 </div>
             </div>
             <div class="proyecto">
                 <img src="img/Git&GitHub.png" alt="">
-                <div class="overlay">
-                    <h>GIT & GITHUB</h>
+                <div>
+
                 </div>
             </div>
-            <div class="proyecto">
+            <div>
                 <img src="img/sass.png" alt="">
-                <div class="overlay">
-                    <h3>SASS</h3>
+                <div>
+
                 </div>
             </div>
             <div class="proyecto">
                 <img src="img/Bootstrap.png" alt="">
-                <div class="overlay">
-                    <h3>BOOTSTRAP</h3>
+                <div>
+
+                </div>
+            </div>
+            <div class="proyecto">
+                <img src="img/filezilla.png" alt="">
+                <div>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<footer>
-    <h5 class="footer">Tuki</h5>
-</footer>
+<footer class="footer">
+    <div>
+        <i class="fa-brands fa-instagram fa-xl"></i>
+        <i class="fa-brands fa-linkedin fa-xl"></i>
+        <i class="fa-brands fa-github fa-xl"></i>
+        <i class="fa-regular fa-envelope fa-xl"></i>
 
+    </div>
+    <div>
+        <h5 class="footerText">&copy; Web Developer Walter_VZ</h5>
+    </div>
+    
+</footer>
+<div class="Freepik">
+    Imagen de <a
+        href="https://www.freepik.es/vector-gratis/fondo-tecnologia-verde-degradado_21534796.html">Freepik</a>
+</div>
 <!--     el link para hacer el pop-up -about me- https://www.youtube.com/watch?v=5c8NLiKW5aI 
     header -->
 
 
 
-    Imagen de <a href="https://www.freepik.es/vector-gratis/fondo-tecnologia-verde-degradado_21534796.htm">Freepik</a>
+
 <script src="js/script.js"></script>
 </body>
 
