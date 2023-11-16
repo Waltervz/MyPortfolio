@@ -21,14 +21,13 @@ modal_container.addEventListener('click', (event) => {
   }
 });
 
+
 const translateButton = document.getElementById("translateButton");
 const modalContent = document.querySelector(".modal p");
 
 const originalText = modalContent.textContent.trim();
 const translatedText = `
-    Saludos! Soy Walter, un apasionado Desarrollador Web de Argentina. Te invito a explorar mi enfoque ecléctico y versátil en el emocionante mundo del desarrollo web. Desde proyectos innovadores hasta soluciones corporativas, fusiono la innovación con la tradición, siempre con audacia y autenticidad.
-    Mi portafolio es un testimonio de cómo combino la creatividad con la versatilidad para crear experiencias web únicas y funcionales. Si buscas una perspectiva equilibrada que capture tanto lo vanguardista como lo convencional, estoy aquí para colaborar contigo.
-    Gracias por acompañarme en este viaje de exploración y creatividad en el desarrollo web.
+Hola, soy Walter, un apasionado desarrollador web de Argentina. Me encanta combinar la creatividad con la funcionalidad en el desarrollo web, ya sea en proyectos innovadores o soluciones corporativas. Mi portafolio refleja mi enfoque versátil. Actualmente estoy cursando mi carrera en UX/UI y también trabajando en mejorar mi nivel de inglés al estándar B2 de Cambridge. ¡Conectemos y creemos juntos en el mundo del desarrollo web!
 `;
 
 let isTranslated = false;

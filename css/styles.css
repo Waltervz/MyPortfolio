@@ -75,6 +75,7 @@ main{
     align-items: center;
     margin-bottom: 20px;
     width: 100%;   
+   
 }
 /* Estilos para el pop-up */
 button {
@@ -87,6 +88,44 @@ button {
     padding: 10px 25px;
     height: 50px;
     width: 200px;
+    margin-left: 10px;
+ 
+  } 
+  #translateButton{
+    background: linear-gradient(180deg, #1d04ad79, rgba(6, 255, 234, 0.5));
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 15px 25px 25px;
+    height: 25px;
+    width: 200px;
+    margin-left: 10px;
+    text-align: center;
+
+  }
+
+ #submit{
+    background: linear-gradient(2deg, #1d04ad79, rgba(6, 255, 234, 0.5));
+ }
+
+
+ #close {
+   display:flex;
+   align-items: center;
+   color:;
+   background: linear-gradient(20deg, #1d04ad79, rgba(6, 255, 234, 0.5));
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 25px;
+    height: 2px;
+    justify-content: center;
+    width: 100px;
+    margin-top: 10px;
     margin-left: 10px;
  
   } 
@@ -107,6 +146,7 @@ button {
     width: 100vw;
     transition: opacity 0.5s ease, left 0.5s ease; /* Ajusta la velocidad de deslizamiento */
     z-index: 9999;
+ 
 }
   
 .show {
@@ -119,11 +159,12 @@ button {
     background-color: #00008B; /* Cambia el color de fondo a azul marino (#00008B) */
     color: #fff; /* Cambia el color del texto a blanco (#fff) */
     width: 800px;
-    height: 600px;
+    height:auto;
     max-width: 100%;
     padding: 30px 50px;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Libre Baskerville', serif;
     text-align: center;
 }
 
@@ -143,6 +184,7 @@ button {
     align-items: center;
     flex-direction: column;
     height: 100%;
+   
 }
 
 .contact-form {
@@ -151,20 +193,46 @@ button {
     align-items: center;
     text-align: center;
     background-color: #0039619a;
-    padding: 20px;
+    padding: 0.5em;
     border: 2px solid #00000f8c;
-    border-radius: 5px;
+    border-radius: 20px;
     text-align: left;
     width: 100%;
     max-width: 500px;
-    margin: 1em auto;
+    
+    
+  }
+
+  .form-group{
+    margin-bottom: 1em;
+   border-radius: 50px;
+
+  }
+  .form-group{
+    text-align: center;
   }
   .contact-form h2 {
     
     margin-top: 0;
   }
   
-  
+  input{
+    background-color: transparent;
+    border: none;
+    border-bottom:1px solid #ccc;
+    outline: none;
+    font-family: 'Libre Baskerville', serif;
+    color: whitesmoke;
+
+
+  }
+
+  #text, #email, #message{
+    background-color: transparent;
+    color: whitesmoke;
+    outline: none;
+  }
+
 /* Estilos para el logo */
 #logo-container {
     display: flex;
@@ -180,7 +248,6 @@ button {
     
     font-size: 10rem;
     font-family: 'Bangers', cursive;
-
     padding-top: 1em; 
     color:  #9dff00 ; 
     opacity: 0;
@@ -408,9 +475,7 @@ button {
         display: flex;
         flex-direction: column;
     }
-    button{
-        display: none;
-    }
+  
     .letter{
         margin-top: -50px;
         font-size: 5em;
@@ -448,6 +513,9 @@ button {
         margin-left: 5px;
         margin-bottom: 0;
     
+    }
+    #openMain{
+        display: none;
     }
 }
 
