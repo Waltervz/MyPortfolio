@@ -107,9 +107,13 @@ button {
   }
 
  #submit{
+    color: #ffffff;
+    cursor: pointer;
     background: linear-gradient(2deg, #1d04ad79, rgba(6, 255, 234, 0.5));
  }
-
+#submit:active{
+    background-color: #00008B;
+}
 
  #close {
    display:flex;
@@ -445,7 +449,7 @@ button {
 
 
 /* Media query para pantallas de tamaño máximo de 768px (tablets y dispositivos móviles) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     body {
         align-items: flex-start;
         justify-content: flex-start;
