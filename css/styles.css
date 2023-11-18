@@ -165,7 +165,7 @@ button {
     width: 800px;
     height:auto;
     max-width: 100%;
-    padding: 30px 50px;
+    padding: 10px 50px;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     font-family: 'Libre Baskerville', serif;
@@ -474,6 +474,10 @@ button {
         text-align: center; /* Centrar el texto en pantallas pequeñas */
     }
     
+    nav #contact{
+        position: relative;
+        z-index: 9999999999;
+    }
 
     main{
         display: flex;
