@@ -27,7 +27,7 @@ const modalContent = document.querySelector(".modal p");
 
 const originalText = modalContent.textContent.trim();
 const translatedText = `
-Hola, soy Walter, un apasionado desarrollador web de Argentina. Me encanta combinar la creatividad con la funcionalidad en el desarrollo web, ya sea en proyectos innovadores o soluciones corporativas. Mi portafolio refleja mi enfoque versátil. Actualmente estoy cursando mi carrera en UX/UI y también trabajando en mejorar mi nivel de inglés al estándar B2 de Cambridge. ¡Conectemos y creemos juntos en el mundo del desarrollo web!
+Hola, soy Walter, un apasionado desarrollador web de Argentina. Me encanta combinar la creatividad con la funcionalidad en el desarrollo web, ya sea en proyectos innovadores o soluciones corporativas. Mi portafolio refleja mi enfoque versátil. Actualmente estoy cursando mi carrera en UX/UI. ¡Conectemos y creemos juntos en el mundo del desarrollo web!
 `;
 
 let isTranslated = false;
